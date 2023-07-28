@@ -2,7 +2,7 @@ FROM openjdk:11
 
 EXPOSE 8089
 
-ARG JAR_FILE=target/github-actions-gke-0.0.1-SNAPSHOT.jar
-ADD ${JAR_FILE} app.jar
+WORKDIR /app
+COPY target/github-actions-gke-0.0.1-SNAPSHOT.jar /app/app.jar
 
-ENTRYPOINT exec java -jar /app.jar
+CMD ["java", "-jar", "app.jar"]
