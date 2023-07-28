@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.aeradron-code</groupId>
 	<artifactId>github-actions-gke</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>github-actions-gke</name>
 	<description>Demo project for Spring Boot</description>
 
