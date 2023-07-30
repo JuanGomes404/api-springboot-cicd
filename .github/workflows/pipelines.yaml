@@ -20,9 +20,10 @@ jobs:
 
     steps:
     
-      - name: Set TAG with Git commit hash
-        id: set_tag
-        run: echo "TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      - name: Obter o hash do último commit do Git
+        run: |
+          TAG=$(git rev-parse --short HEAD)
+          echo "TAG=$TAG" >> $GITHUB_ENV
         
       - name: Checkout Repository
         uses: actions/checkout@v2
