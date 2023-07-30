@@ -19,14 +19,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
+        
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
       - name: Obter o hash do último commit do Git
         run: |
           TAG=$(git rev-parse --short HEAD)
           echo "TAG=$TAG" >> $GITHUB_ENV
-        
-      - name: Checkout Repository
-        uses: actions/checkout@v2
       
       - name: Setup JDK 11
         uses: actions/setup-java@v1
