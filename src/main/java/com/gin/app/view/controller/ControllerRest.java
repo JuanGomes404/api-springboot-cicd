@@ -16,7 +16,7 @@ import java.net.http.HttpResponse;
 public class ControllerRest {
 
 
-    @GetMapping("pokemon/{name}")
+    @GetMapping("pokemon/details/{name}")
     public ResponseEntity<String> getPokemon(@PathVariable("name") String name) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://pokeapi.co/api/v2/pokemon/"+name))
